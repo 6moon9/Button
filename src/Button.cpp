@@ -19,3 +19,8 @@ bool Button::getValue()
     byte state = reversed ? LOW : HIGH;
     return digitalRead(pin) == state;
 }
+
+int Button::getAnalogValue()
+{
+    return analogRead(pin);
+}
