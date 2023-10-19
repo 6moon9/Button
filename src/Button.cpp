@@ -2,11 +2,13 @@
 
 #include "Button.h"
 
-Button::Button(uint8_t iPin, bool iReversed = false)
+Button::Button(uint8_t iPin, bool iReversed = false, bool pullUp = false)
 {
     pin = iPin;
     reversed = iReversed;
     pinMode(pin, INPUT);
+    if (pullUp)
+        pinMode(pin, INPUT_PULLUP);
 }
 
 /**
