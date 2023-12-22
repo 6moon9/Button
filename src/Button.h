@@ -3,7 +3,7 @@
 class Button
 {
     public:
-        Button(uint8_t iPin, bool iReversed = false);
+        Button(uint8_t iPin, bool iReversed = false, bool pullUp = false);
         bool getValue();
         int getAnalogValue();
         uint8_t pin;
